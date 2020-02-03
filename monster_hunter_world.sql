@@ -30,8 +30,10 @@ CREATE TABLE `armor` (
   `cost_money` int DEFAULT NULL,
   `rank_value` varchar(128) DEFAULT NULL,
   `set_name` varchar(128) DEFAULT NULL,
+  `part` varchar(128) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `name` (`name`)
+  UNIQUE KEY `name` (`name`),
+  UNIQUE KEY `uq_set_name_and_part` (`set_name`,`part`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
