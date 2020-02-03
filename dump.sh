@@ -13,7 +13,7 @@ CONNECT_CONSECUTIVE_INSERT_URL="https://raw.githubusercontent.com/482F/misc/mast
 OPT="${1:-}"
 
 function main(){
-    mysqldump -h "${HOSTNAME}" -P "${PORT}" --skip-dump-date "${DATABASE_NAME}" > "${DATABASE_DUMP_FILE_TMP}"
+    mysqldump -h "${HOSTNAME}" -P "${PORT}" --skip-extended-insert --skip-dump-date "${DATABASE_NAME}" > "${DATABASE_DUMP_FILE_TMP}"
 
     if [ ! -e "${CONNECT_CONSECUTIVE_INSERT}" ]; then
         update
