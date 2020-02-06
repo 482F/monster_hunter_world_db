@@ -54,7 +54,7 @@ DROP TABLE IF EXISTS `armor_material`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `armor_material` (
-  `id` int NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
   `armor_name` varchar(128) NOT NULL,
   `material_name` varchar(128) NOT NULL,
   `number_of_require_material` int NOT NULL,
@@ -82,7 +82,7 @@ DROP TABLE IF EXISTS `armor_resistance`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `armor_resistance` (
-  `id` int NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
   `armor_name` varchar(128) NOT NULL,
   `element_name` varchar(128) NOT NULL,
   `resistance_value` varchar(128) NOT NULL,
@@ -109,7 +109,7 @@ DROP TABLE IF EXISTS `armor_set_bonus`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `armor_set_bonus` (
-  `id` int NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
   `armor_name` varchar(128) NOT NULL,
   `bonus_name` varchar(128) NOT NULL,
   `bonus_skill_name` varchar(128) NOT NULL,
@@ -138,7 +138,7 @@ DROP TABLE IF EXISTS `armor_skill`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `armor_skill` (
-  `id` int NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
   `armor_name` varchar(128) NOT NULL,
   `skill_name` varchar(128) NOT NULL,
   `skill_level` int NOT NULL,
@@ -166,7 +166,7 @@ DROP TABLE IF EXISTS `armor_slot`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `armor_slot` (
-  `id` int NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
   `armor_name` varchar(128) NOT NULL,
   `slot_level` int NOT NULL,
   `number_of_slot` int NOT NULL,
